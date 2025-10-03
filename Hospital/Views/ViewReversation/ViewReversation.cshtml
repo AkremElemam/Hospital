@@ -1,0 +1,23 @@
+﻿@* @model List<Appointment>
+<table>
+    <thead>
+    <tr>
+        <th>doctot id</th>
+        <th>Time</th>
+        <th>Date</th>
+        <th>time</th>     
+    </tr>
+    <thead/>
+    <tdody>
+
+          @for(int i =0;i<Model.Count;i++)
+            {
+            <tr>
+                <td> @Model[i].DoctorId</td>
+                <td>@Model[i].AppointmentTime</td>
+                <td>@Model[i].AppointmentDate</td>
+            </tr>
+        }
+
+    </tdody>
+</table> *@

@@ -1,0 +1,45 @@
+﻿@model List<Doctor>
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
+<h1>Book Appointment</h1>
+<form>
+    <div class="row">
+
+        <div class="col-md-6 mb-3">
+            <label for="doctorName" class="form-label">Doctor's Name</label>
+            <input name="name" type="text" class="form-control" id="doctorName" placeholder="Dr. Jane Doe">
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <label for="doctorSpecialization" class="form-label">Specialization</label>
+            <select name="specialization" class="form-select" id="doctorSpecialization">
+                <option selected value="">Choose...</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Pediatrics">Pediatrics</option>
+                <option value="Dermatology">Dermatology</option>
+                <option value=" Neurology"> Neurology</option>
+                <option value="General Surgery">General Surgery</option>
+                <option value="Orthopedics">Orthopedics</option>
+            </select>
+        </div>
+
+    </div>
+    <button type="submit" class="btn btn-primary mb-4">Filter</button>
+</form>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img class="card-img-top"
+                     src="~/images/doctots/@item.ImageUrl"
+                     style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f9fa;"
+                     alt="Doctor Image">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                    <p class="card-text">Specialization : @item.Specialization</p>
+                    <a href="/Reserve/Appointment/@item.DoctorId" class="btn btn-primary">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    }   
+</div>
