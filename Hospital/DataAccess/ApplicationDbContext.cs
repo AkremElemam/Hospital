@@ -107,7 +107,7 @@ namespace Hospital.DataAccess
                 new Doctor { DoctorId = 3, Name = "Dr. Youssef Adel", Specialization = "Neurology", ImageUrl = "docror3.jpg", IsActive = true },
                 new Doctor { DoctorId = 4, Name = "Dr. Reda Kamal", Specialization = "Pediatrics", ImageUrl = "docror4.jpg", IsActive = true },
                 new Doctor { DoctorId = 5, Name = "Dr. Karim Nabil", Specialization = "Orthopedics", ImageUrl = "docror5.png", IsActive = true },
-                new Doctor { DoctorId = 6, Name = "Dr. Hany Mostafa", Specialization = "General Surgery", ImageUrl = "docror6.png", IsActive = false }
+                new Doctor { DoctorId = 6, Name = "Dr. Hany Mostafa", Specialization = "General Surgery", ImageUrl = "docror6.png", IsActive = false }
             );
 
             // Patient Seed Data
